@@ -1,8 +1,16 @@
-
+ls
 .text-platzi{
     color:#97c93e !important;
 }
 
+.btn-platzi{
+    background-color: #97c93e;
+    color: white !important;
+}
+
+.btn-platzi:hover{
+    background-color: #82ad36;
+}
 #nav img{
     width: 80px;
 }
