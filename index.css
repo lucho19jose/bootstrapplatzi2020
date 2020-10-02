@@ -11,6 +11,13 @@ ls
 .btn-platzi:hover{
     background-color: #82ad36;
 }
+#place-time{
+    background-color: #343a40;
+    color: white;
+}
+#place-time img{
+    max-width: 100%;
+}
 #nav img{
     width: 80px;
 }
