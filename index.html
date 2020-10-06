@@ -94,7 +94,9 @@
       <div class="row">
         <div class="col text-center text-uppercase">
           <small>conoce a los</small>
-          <h2>speakers</h2>
+          <abbr title="los expertos oradores" data-toggle="tooltip">
+            <h2>speakers</h2>
+          </abbr>
         </div>
       </div>
       <div class="row">
@@ -209,20 +211,41 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
-          <form>
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2 pb-3">
+          <form class="needs-validation" novalidate>
             <div class="form-row">
               <div class="form-group col-12 col-md-6">
-                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" id="validationCustom01" class="form-control" name="name" placeholder="Nombres"
+                  required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please choose a name.
+                </div>
               </div>
               <div class="form-group col-12 col-md-6">
-                <input type="text" class="form-control" placeholder="Last name">
+                <input type="text" id="validationCustom02" class="form-control" placeholder="Apellidos" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please choose a last name.
+                </div>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col">
-                <textarea name="text" class="form-control" rows="4"></textarea>
-                <small>recuerda decirnos el titulo</small>
+                <textarea name="text" class="form-control" rows="4" required></textarea>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please put any thing.
+                </div>
+                <small>recuerda decirnos el titulo de tu <abbr data-toggle="tooltip" title="charlas de 5 minutos">
+                    charla ignite</abbr>
+                </small>
               </div>
             </div>
             <div class="form-row">
@@ -268,6 +291,28 @@
       </div>
     </div>
   </footer>
+  <!-- validation script -->
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+  <!-- /validation script -->
   <!-- End footer -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -278,6 +323,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 
 
