@@ -40,7 +40,7 @@ ls
 }
 
 #carousel .overlay {
-    z-index: 10000000;
+    z-index: 1;
     position: absolute;
     top: 0;
     bottom: 0;
